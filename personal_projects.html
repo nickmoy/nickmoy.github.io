@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.myDiv {
+  border: 4px outset grey;
+  background-color: lightblue;    
+  text-align: center;
+  margin: 50px
+  position: absolute;
+  width: 50%;
+  float: left;
+  border-color:grey;
+  box-shadow:0 0 10px #9ecaed;
+}
+</style>
+
+<style>
+.Topbar {
+	position = fixed;
+    border: 4px outset #5071b3;
+    background-color: #575898;
+    height: 100px;
+	padding: 10px;
+    text-decoration: none;
+}
+</style>
+
+<style>
+.project {
+    padding-left: 100px;
+    width: 40%;
+}
+</style>
+
+<style>
+.Link {
+	color: #B0B0F9;
+}
+</style>
+</head>
+<body>
+
+<div class="Topbar">
+	<h1>
+    	<a
+    		style="text-decoration: none;
+            color: #FFFFFF;"
+            href="https://nickmoy.github.io">
+            	Nicholas Moy
+        </a>
+   	</h1>
+    
+	<a
+    	class="Link" href="https://nickmoy.github.io">
+        	Bio
+    </a>
+    
+    <a
+    	style="padding-left: 10px;"
+        class="Link" href="https://nickmoy.github.io">
+        	Personal Projects
+    </a>
+    <a
+    	style="padding-left: 10px;"
+        class="Link" href="https://github.com/nickmoy">
+       		Github
+    </a>
+    <a
+    	style="padding-left: 10px;"
+        class="Link" href="https://www.linkedin.com/in/nicholas-moy-3ab451220/">
+        	LinkedIn
+    </a>
+    <a
+    	style="padding-left: 10px;"
+        class="Link" href="resume.pdf">
+        	CV
+    </a>
+</div>
+
+<p></p>
+
+<div 
+    style="
+    width: 200px;
+    height: 200px;
+    float: left;
+    padding-left: 10px;
+    "
+    >
+    <img src="VerletIntegrationPic.png" width="200px">
+</div>
+
+<div class="project">
+    <p>Basic demo of Verlet Integration using SDL2 and OpenGL3. This was a small personal project to learn C++, SDL2, OpenGL. This was written in OpenGL Core without extension libraries such as GLUT, GLEW, or GLFW for the purposes of learning just basic OpenGL without modifications</p>
+    <a
+    	style="padding-left: 10px;"
+        class="Link" href="https://www.github.com/nickmoy/VerletIntegration">
+        	Github
+    </a> 
+</div>
+
+<div 
+    style="
+    width: 200px;
+    height: 200px;
+    padding-left: 10px;
+    "
+    >
+    <img src="NNPoissonPic.png" width="200px">
+</div>
+
+<div class="project">
+    <p>Jupyter Notebook with a simple feed forward Neural Network setup using Pytorch to solve the 2-D Poisson Equation with Dirichlet Boundary conditions. I used a central difference scheme to calculate the discrete Laplacian over a 2-D grid and trained on the MSE between this discrete Laplacian and the given function. This has a good boilerplate setup for creating a neural network in pytorch using CPU (not Cuda). Also comes with visualizations of the solution and a graph of errors over the iterations using matplotlib.</p>
+    <a
+    	style="padding-left: 10px;"
+        class="Link" href="https://github.com/nickmoy/Poisson-Equation-NN">
+        	Github
+    </a> 
+</div>
+
+</body>
+</html>
