@@ -13,9 +13,7 @@
   border-color:grey;
   box-shadow:0 0 10px #9ecaed;
 }
-</style>
 
-<style>
 .Topbar {
 	position = fixed;
     border: 4px outset #5071b3;
@@ -24,16 +22,27 @@
 	padding: 10px;
     text-decoration: none;
 }
-</style>
 
-<style>
 .project {
     padding-left: 100px;
     width: 40%;
 }
-</style>
 
-<style>
+.wrapper {
+    width: 700px;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+.first {
+    width: 300px;
+    float:left; /* add this */
+    border: 1px solid red;
+}
+.second {
+    border: 1px solid green;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+
 .Link {
 	color: #B0B0F9;
 }
@@ -80,43 +89,32 @@
 
 <p></p>
 
-<div 
-    style="
-    width: 200px;
-    height: 200px;
-    float: left;
-    padding-left: 10px;
-    "
-    >
-    <img src="VerletIntegrationPic.png" width="200px">
+<div class="wrapper">
+    <div class="first">
+        <img src="VerletIntegrationPic.png" width="300px">
+    </div>
+    <div class="second">
+        <p>Basic demo of Verlet Integration using SDL2 and OpenGL3. This was a small personal project to learn C++, SDL2, OpenGL. This was written in OpenGL Core without extension libraries such as GLUT, GLEW, or GLFW for the purposes of learning just basic OpenGL without modifications</p>
+        <a
+            style="padding-left: 10px;"
+            class="Link" href="https://www.github.com/nickmoy/VerletIntegration">
+            Github
+        </a> 
+    </div>
 </div>
 
-<div class="project">
-    <p>Basic demo of Verlet Integration using SDL2 and OpenGL3. This was a small personal project to learn C++, SDL2, OpenGL. This was written in OpenGL Core without extension libraries such as GLUT, GLEW, or GLFW for the purposes of learning just basic OpenGL without modifications</p>
-    <a
-    	style="padding-left: 10px;"
-        class="Link" href="https://www.github.com/nickmoy/VerletIntegration">
-        	Github
-    </a> 
-</div>
-
-<div 
-    style="
-    width: 200px;
-    height: 200px;
-    padding-left: 10px;
-    "
-    >
-    <img src="NNPoissonPic.png" width="200px">
-</div>
-
-<div class="project">
-    <p>Jupyter Notebook with a simple feed forward Neural Network setup using Pytorch to solve the 2-D Poisson Equation with Dirichlet Boundary conditions. I used a central difference scheme to calculate the discrete Laplacian over a 2-D grid and trained on the MSE between this discrete Laplacian and the given function. This has a good boilerplate setup for creating a neural network in pytorch using CPU (not Cuda). Also comes with visualizations of the solution and a graph of errors over the iterations using matplotlib.</p>
-    <a
-    	style="padding-left: 10px;"
-        class="Link" href="https://github.com/nickmoy/Poisson-Equation-NN">
-        	Github
-    </a> 
+<div class="wrapper">
+    <div class="first">
+        <img src="NNPoissonPic.png" width="300px">
+    </div>
+    <div class="second">
+        <p>Jupyter Notebook with a simple feed forward Neural Network setup using Pytorch to solve the 2-D Poisson Equation with Dirichlet Boundary conditions. I used a central difference scheme to calculate the discrete Laplacian over a 2-D grid and trained on the MSE between this discrete Laplacian and the given function. This has a good boilerplate setup for creating a neural network in pytorch using CPU (not Cuda). Also comes with visualizations of the solution and a graph of errors over the iterations using matplotlib.</p>
+        <a
+            style="padding-left: 10px;"
+            class="Link" href="https://www.github.com/nickmoy/Poisson-Equation-NN">
+            Github
+        </a> 
+    </div>
 </div>
 
 </body>
