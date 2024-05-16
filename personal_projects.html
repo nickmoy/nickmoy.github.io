@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <style>
 
 .myDiv {
-  border: 4px outset grey;
-  background-color: lightblue;    
-  text-align: center;
-  margin: 50px
-  position: absolute;
-  width: 50%;
-  float: left;
-  border-color:grey;
-  box-shadow:0 0 10px #9ecaed;
-}
-
-.header {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
+    border: 4px outset grey;
+    background-color: lightblue;    
+    text-align: center;
+    margin: 50px
+        position: absolute;
+    width: 50%;
+    float: left;
+    border-color:grey;
+    box-shadow:0 0 10px #9ecaed;
 }
 
 .Topbar {
-	position: sticky;
+    position: sticky;
     background-color: #4E474E;
     height: 100px;
     width: 100%;
-    margin: 0px;
     top: 0px;
-	padding: 10px;
+    padding: 10px;
+}
+.TopLink {
+    font-size: 18px;
+    color: #FFFFFF;
 }
 
-.content {
-  padding: 16px;
+.Content {
+    padding: 16px;
 }
 
-.project {
+.Project {
     width: 1010px;
     border: 1px solid black;
     overflow: hidden;           /* will contain if #first is longer than #second */
@@ -51,163 +49,155 @@
     border: 1px <!-- solid green; -->
     overflow: hidden;           /* if you don't want #second to wrap below #first */
 }
-
 .title {
     padding-left: 10px;
     font-size: 30px;
 }
 
 .Link {
-	color: #2C67AC;
-}
-.TopLink {
-	color: #FFFFFF;
+    color: #2C67AC;
 }
 
 </style>
 </head>
-<body style="background-color:#E9E6E6">
 
-<div class="header">
-  <h2>Nicholas Moy</h2>
-</div>
+<body style="background-color:#E9E6E6;
+             margin: 0">
 
-<div class="Topbar">
-    <h1>
+    <div class="Topbar">
+        <h1>
+            <a
+                style="text-decoration: none;
+                color: #FFFFFF;"
+                href="index.html">
+                Nicholas Moy
+            </a>
+        </h1>
+
         <a
-            style="text-decoration: none;
-            color: #FFFFFF;"
+            class="TopLink"
             href="index.html">
-            Nicholas Moy
+            Bio
         </a>
-    </h1>
 
-    <a
-        class="TopLink"
-        href="index.html">
-        Bio
-    </a>
-
-    <a
-        style="padding-left: 10px;"
-        class="TopLink"
-        href="personal_projects.html">
-        Personal Projects
-    </a>
-    <a
-        style="padding-left: 10px;"
-        class="TopLink"
-        href="https://github.com/nickmoy">
-        Github
-    </a>
-    <a
-        style="padding-left: 10px;"
-        class="TopLink"
-        href="https://www.linkedin.com/in/nicholas-moy-3ab451220/">
-        LinkedIn
-    </a>
-    <a
-        style="padding-left: 10px;"
-        class="TopLink"
-        href="resume.pdf">
-        CV
-    </a>
-</div>
-
-<p></p>
-
-<div class="content">
-
-    <div class="project">
-        <div class="first">
-            <img src="VerletIntegrationPic.png" width="300px">
-        </div>
-        <div class="second">
-            <p class="title">Verlet Integration</p>
-            <p>
-            <ul>
-                <li>Uses SDL2 and OpenGL</li>
-                <li>Written without GLUT, GLEW, or GLFW for the purposes of learning basic OpenGL and the graphics pipeline</li>
-                <li>
-                    <a
-                        class="Link" href="https://www.github.com/nickmoy/VerletIntegration">
-                        Github
-                    </a> 
-                </li>
-            </ul>
-            </p>
-        </div>
+        <a
+            style="padding-left: 10px;"
+            class="TopLink"
+            href="personal_projects.html">
+            Personal Projects
+        </a>
+        <a
+            style="padding-left: 10px;"
+            class="TopLink"
+            href="https://github.com/nickmoy">
+            Github
+        </a>
+        <a
+            style="padding-left: 10px;"
+            class="TopLink"
+            href="https://www.linkedin.com/in/nicholas-moy-3ab451220/">
+            LinkedIn
+        </a>
+        <a
+            style="padding-left: 10px;"
+            class="TopLink"
+            href="resume.pdf">
+            CV
+        </a>
     </div>
 
-    <div class="project">
-        <div class="first">
-            <img src="NNPoissonPic.png" width="300px">
+    <div class="Content">
+
+        <div class="Project">
+            <div class="first">
+                <img src="VerletIntegrationPic.png" width="300px">
+            </div>
+            <div class="second">
+                <p class="title">Verlet Integration</p>
+                <p>
+                <ul>
+                    <li>Uses SDL2 and OpenGL</li>
+                    <li>Written without GLUT, GLEW, or GLFW for the purposes of learning basic OpenGL and the graphics pipeline</li>
+                    <li>
+                        <a
+                            class="Link" href="https://www.github.com/nickmoy/VerletIntegration">
+                            Github
+                        </a> 
+                    </li>
+                </ul>
+                </p>
+            </div>
         </div>
-        <div class="second">
-            <p class="title">Poisson Equation Neural Network</p>
-            <p>
-            <ul>
-                <li>Jupyter notebook to solve the Poisson Equation with Dirichlet Boundary Conditions</li>
-                <li>Uses pytorch to train neural network</li>
-                <li>Uses matplotlib to graph solution and errors</li>
-                <li>Can be configured to solve any Poisson Equation written in numpy</li>
-                <li>
-                    <a
-                        class="Link" href="https://www.github.com/nickmoy/Poisson-Equation-NN">
-                        Github
-                    </a> 
-                </li>
-            </ul>
-            </p>
+
+        <div class="Project">
+            <div class="first">
+                <img src="NNPoissonPic.png" width="300px">
+            </div>
+            <div class="second">
+                <p class="title">Poisson Equation Neural Network</p>
+                <p>
+                <ul>
+                    <li>Jupyter notebook to solve the Poisson Equation with Dirichlet Boundary Conditions</li>
+                    <li>Uses pytorch to train neural network</li>
+                    <li>Uses matplotlib to graph solution and errors</li>
+                    <li>Can be configured to solve any Poisson Equation written in numpy</li>
+                    <li>
+                        <a
+                            class="Link" href="https://www.github.com/nickmoy/Poisson-Equation-NN">
+                            Github
+                        </a> 
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="Project">
+            <div class="first">
+                <img src="Game-of-Life.gif" width="300px">
+            </div>
+            <div class="second">
+                <p class="title">Conway's Game of Life</p>
+                <p>
+                <ul>
+                    <li>Written with Java Swing Framework</li>
+                    <li>Default setting contains Bill Gosper's Glider Gun</li>
+                    <li>Can pause with Spacebar and click to create/delete cells</li>
+                    <li>
+                        <a
+                            class="Link" href="https://github.com/nickmoy/Game-of-Life">
+                            Github
+                        </a> 
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="Project">
+            <div class="first">
+                <img src="tennis.gif" width="500px">
+            </div>
+            <div class="second">
+                <p class="title">Tennis Image Analysis AI</p>
+                <p>
+                <ul>
+                    <li>Written in Python</li>
+                    <li>Uses YOLO object detection model and Pytorch Resnet50 neural network</li>
+                    <li>Uses reference points to predict coordinates of players and ball on court</li>
+                    <li>Utilizes libraries: ultralytics, pytorch, opencv, pickle, pandas</li>
+                    <li>
+                        <a
+                            class="Link" href="https://github.com/nickmoy/tennis-image-analysis-ai">
+                            Github
+                        </a> 
+                    </li>
+                </ul>
+                </p>
+            </div>
         </div>
     </div>
-
-    <div class="project">
-        <div class="first">
-            <img src="Game-of-Life.gif" width="300px">
-        </div>
-        <div class="second">
-            <p class="title">Conway's Game of Life</p>
-            <p>
-            <ul>
-                <li>Written with Java Swing Framework</li>
-                <li>Default setting contains Bill Gosper's Glider Gun</li>
-                <li>Can pause with Spacebar and click to create/delete cells</li>
-                <li>
-                    <a
-                        class="Link" href="https://github.com/nickmoy/Game-of-Life">
-                        Github
-                    </a> 
-                </li>
-            </ul>
-            </p>
-        </div>
-    </div>
-
-    <div class="project">
-        <div class="first">
-            <img src="tennis.gif" width="500px">
-        </div>
-        <div class="second">
-            <p class="title">Tennis Image Analysis AI</p>
-            <p>
-            <ul>
-                <li>Written in Python</li>
-                <li>Uses YOLO object detection model and Pytorch Resnet50 neural network</li>
-                <li>Uses reference points to predict coordinates of players and ball on court</li>
-                <li>Utilizes libraries: ultralytics, pytorch, opencv, pickle, pandas</li>
-                <li>
-                    <a
-                        class="Link" href="https://github.com/nickmoy/tennis-image-analysis-ai">
-                        Github
-                    </a> 
-                </li>
-            </ul>
-            </p>
-        </div>
-    </div>
-
-</div>
 
 </body>
+
 </html>

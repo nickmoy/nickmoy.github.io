@@ -17,74 +17,87 @@
 }
 
 .Topbar {
-	position = sticky;
-    border: 4px outset #5071b3;
+    position: sticky;
     background-color: #4E474E;
     height: 100px;
-	padding: 10px;
-    text-decoration: none;
+    width: 100%;
+    top: 0px;
+    padding: 10px;
+}
+
+.Content {
+    padding: 16px;
 }
 
 .Link {
 	color: #2C67AC;
 }
 .TopLink {
+    font-size: 18px;
 	color: #FFFFFF;
 }
 </style>
 </head>
 
-<body style="background-color:#E9E6E6">
+<body style="background-color:#E9E6E6;
+    margin: 0">
 
-<div class="Topbar">
-	<h1>
-    	<a
-    		style="text-decoration: none;
-            color: #FFFFFF;"
-            href="index.html">
-            	Nicholas Moy
+    <!-- Topbar -->
+    <div class="Topbar">
+        <h1>
+            <a
+                style="text-decoration: none;
+                color: #FFFFFF;"
+                href="index.html">
+                Nicholas Moy
+            </a>
+        </h1>
+
+        <a
+            class="TopLink" href="index.html">
+            Bio
         </a>
-   	</h1>
-    
-	<a
-    	class="TopLink" href="index.html">
-        	Bio
-    </a>
-    
-    <a
-    	style="padding-left: 10px;"
-        class="TopLink" href="personal_projects.html">
-        	Personal Projects
-    </a>
-    <a
-    	style="padding-left: 10px;"
-        class="TopLink" href="https://github.com/nickmoy">
-       		Github
-    </a>
-    <a
-    	style="padding-left: 10px;"
-        class="TopLink" href="https://www.linkedin.com/in/nicholas-moy-3ab451220/">
-        	LinkedIn
-    </a>
-    <a
-    	style="padding-left: 10px;"
-        class="TopLink" href="resume.pdf">
-        	CV
-    </a>
-</div>
 
-<div style="position: absolute; width: 50%;">
-    <p>
-    I am a recent graduate with a Masters in Math from UC Irvine in 2023 who is interested in software engineering and machine learning. Originally, I'm from Los Angeles, California, and I completed my Bachelors in Math from UC Berkeley in 2021 with honors. In school, I was very interested in geometry, particularly algebraic geometry and studied topics up to scheme theory. In the applied math fields, I took Computer Science classes like Data Structures and Machine Learning as an undergraduate as well as classes such as ODEs, PDEs, and Computational Differential Equations during graduate school. I have experience with C++, python, and Java.
-    </p>
+        <a
+            style="padding-left: 10px;"
+            class="TopLink" href="personal_projects.html">
+            Personal Projects
+        </a>
+        <a
+            style="padding-left: 10px;"
+            class="TopLink" href="https://github.com/nickmoy">
+            Github
+        </a>
+        <a
+            style="padding-left: 10px;"
+            class="TopLink" href="https://www.linkedin.com/in/nicholas-moy-3ab451220/">
+            LinkedIn
+        </a>
+        <a
+            style="padding-left: 10px;"
+            class="TopLink" href="resume.pdf">
+            CV
+        </a>
+    </div>
 
-    <p>
-    Feel free to contact me at <span style="color: #363791;"><u>nsmoy@uci.edu</u></span>
-    </p>
-</div>
+    <!-- Start of content -->
+    <div class="Content">
 
-<img src="NickPic.png" align="right" width="500"> 
+        <div style="position: absolute; width: 50%;">
+            <p>
+            I am a recent graduate with a Masters in Math from UC Irvine in 2023 who is interested in software engineering and machine learning. Originally, I'm from Los Angeles, California, and I completed my Bachelors in Math from UC Berkeley in 2021 with honors. In school, I was very interested in geometry, particularly algebraic geometry and studied topics up to scheme theory. In the applied math fields, I took Computer Science classes like Data Structures and Machine Learning as an undergraduate as well as classes such as ODEs, PDEs, and Computational Differential Equations during graduate school. I have experience with C++, python, and Java.
+            </p>
+
+            <p>
+            Feel free to contact me at <span style="color: #363791;"><u>nsmoy@uci.edu</u></span>
+            </p>
+        </div>
+
+        <img src="NickPic.png" align="right" width="500"> 
+
+    </div>
 
 </body>
+
 </html>
 
