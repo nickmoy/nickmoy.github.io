@@ -15,133 +15,198 @@
   box-shadow:0 0 10px #9ecaed;
 }
 
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
 .Topbar {
-    position: -webkit-sticky;
 	position: sticky;
-    border: 4px outset #5071b3;
     background-color: #4E474E;
     height: 100px;
+    width: 100%;
+    margin: 0px;
     top: 0px;
 	padding: 10px;
-    text-decoration: none;
+}
+
+.content {
+  padding: 16px;
 }
 
 .project {
-    width: 700px;
+    width: 1010px;
     border: 1px solid black;
-    overflow: hidden; /* will contain if #first is longer than #second */
+    overflow: hidden;           /* will contain if #first is longer than #second */
 }
 .first {
-    width: 300px;
-    float:left; /* add this */
+    width: 500px;
+    float: left;
     border: 1px solid red;
 }
 .second {
-    border: 1px solid green;
-    overflow: hidden; /* if you don't want #second to wrap below #first */
+    width: 500px;
+    float: left;
+    border: 1px <!-- solid green; -->
+    overflow: hidden;           /* if you don't want #second to wrap below #first */
+}
+
+.title {
+    padding-left: 10px;
+    font-size: 30px;
 }
 
 .Link {
 	color: #2C67AC;
+}
+.TopLink {
+	color: #FFFFFF;
 }
 
 </style>
 </head>
 <body style="background-color:#E9E6E6">
 
+<div class="header">
+  <h2>Nicholas Moy</h2>
+</div>
+
 <div class="Topbar">
-	<h1>
-    	<a
-    		style="text-decoration: none;
+    <h1>
+        <a
+            style="text-decoration: none;
             color: #FFFFFF;"
             href="index.html">
-            	Nicholas Moy
+            Nicholas Moy
         </a>
-   	</h1>
-    
-	<a
-    	class="Link" href="index.html">
-        	Bio
-    </a>
-    
+    </h1>
+
     <a
-    	style="padding-left: 10px;"
-        class="Link" href="personal_projects.html">
-        	Personal Projects
+        class="TopLink"
+        href="index.html">
+        Bio
     </a>
+
     <a
-    	style="padding-left: 10px;"
-        class="Link" href="https://github.com/nickmoy">
-       		Github
+        style="padding-left: 10px;"
+        class="TopLink"
+        href="personal_projects.html">
+        Personal Projects
     </a>
     <a
-    	style="padding-left: 10px;"
-        class="Link" href="https://www.linkedin.com/in/nicholas-moy-3ab451220/">
-        	LinkedIn
+        style="padding-left: 10px;"
+        class="TopLink"
+        href="https://github.com/nickmoy">
+        Github
     </a>
     <a
-    	style="padding-left: 10px;"
-        class="Link" href="resume.pdf">
-        	CV
+        style="padding-left: 10px;"
+        class="TopLink"
+        href="https://www.linkedin.com/in/nicholas-moy-3ab451220/">
+        LinkedIn
+    </a>
+    <a
+        style="padding-left: 10px;"
+        class="TopLink"
+        href="resume.pdf">
+        CV
     </a>
 </div>
 
 <p></p>
 
-<div class="project">
-    <div class="first">
-        <img src="VerletIntegrationPic.png" width="300px">
-    </div>
-    <div class="second">
-        <p>Basic demo of Verlet Integration using SDL2 and OpenGL3. This was a small personal project to learn C++, SDL2, OpenGL. This was written in OpenGL Core without extension libraries such as GLUT, GLEW, or GLFW for the purposes of learning just basic OpenGL without modifications</p>
-        <a
-            style="padding-left: 10px;"
-            class="Link" href="https://www.github.com/nickmoy/VerletIntegration">
-            Github
-        </a> 
-    </div>
-</div>
+<div class="content">
 
-<div class="project">
-    <div class="first">
-        <img src="NNPoissonPic.png" width="300px">
+    <div class="project">
+        <div class="first">
+            <img src="VerletIntegrationPic.png" width="300px">
+        </div>
+        <div class="second">
+            <p class="title">Verlet Integration</p>
+            <p>
+            <ul>
+                <li>Uses SDL2 and OpenGL</li>
+                <li>Written without GLUT, GLEW, or GLFW for the purposes of learning basic OpenGL and the graphics pipeline</li>
+                <li>
+                    <a
+                        class="Link" href="https://www.github.com/nickmoy/VerletIntegration">
+                        Github
+                    </a> 
+                </li>
+            </ul>
+            </p>
+        </div>
     </div>
-    <div class="second">
-        <p>Jupyter Notebook with a simple feed forward Neural Network setup using Pytorch to solve the 2-D Poisson Equation with Dirichlet Boundary conditions. I used a central difference scheme to calculate the discrete Laplacian over a 2-D grid and trained on the MSE between this discrete Laplacian and the given function. This has a good boilerplate setup for creating a neural network in pytorch using CPU (not Cuda). Also comes with visualizations of the solution and a graph of errors over the iterations using matplotlib.</p>
-        <a
-            style="padding-left: 10px;"
-            class="Link" href="https://www.github.com/nickmoy/Poisson-Equation-NN">
-            Github
-        </a> 
-    </div>
-</div>
 
-<div class="project">
-    <div class="first">
-        <img src="GameofLife.png" width="300px">
+    <div class="project">
+        <div class="first">
+            <img src="NNPoissonPic.png" width="300px">
+        </div>
+        <div class="second">
+            <p class="title">Poisson Equation Neural Network</p>
+            <p>
+            <ul>
+                <li>Jupyter notebook to solve the Poisson Equation with Dirichlet Boundary Conditions</li>
+                <li>Uses pytorch to train neural network</li>
+                <li>Uses matplotlib to graph solution and errors</li>
+                <li>Can be configured to solve any Poisson Equation written in numpy</li>
+                <li>
+                    <a
+                        class="Link" href="https://www.github.com/nickmoy/Poisson-Equation-NN">
+                        Github
+                    </a> 
+                </li>
+            </ul>
+            </p>
+        </div>
     </div>
-    <div class="second">
-        <p>This is an implementation of Conway's Game of Life written in Java with the Java Swing framework for the graphics and display. The default setup has Bill Gosper's Glider Gun and you can pause the game with Spacebar and click the mouse to add/remove your own cells.</p>
-        <a
-            style="padding-left: 10px;"
-            class="Link" href="https://github.com/nickmoy/Game-of-Life">
-            Github
-        </a> 
-    </div>
-</div>
 
-<div class="project">
-    <div class="first">
-        <img src="tennis.gif" width="300px">
+    <div class="project">
+        <div class="first">
+            <img src="Game-of-Life.gif" width="300px">
+        </div>
+        <div class="second">
+            <p class="title">Conway's Game of Life</p>
+            <p>
+            <ul>
+                <li>Written with Java Swing Framework</li>
+                <li>Default setting contains Bill Gosper's Glider Gun</li>
+                <li>Can pause with Spacebar and click to create/delete cells</li>
+                <li>
+                    <a
+                        class="Link" href="https://github.com/nickmoy/Game-of-Life">
+                        Github
+                    </a> 
+                </li>
+            </ul>
+            </p>
+        </div>
     </div>
-    <div class="second">
-        <p>An image analysis neural network model which analyzes images/videos of tennis matches written in python. Uses the YOLO object detection model and pytorch Resnet50. Uses reference points on the court to predict the coordinates of the players and ball on the court and their velocities. Uses python libraries such as pytorch, opencv, pickle, pandas</p>
-        <a
-            style="padding-left: 10px;"
-            class="Link" href="https://github.com/nickmoy/tennis-image-analysis-ai">
-            Github
-        </a> 
+
+    <div class="project">
+        <div class="first">
+            <img src="tennis.gif" width="500px">
+        </div>
+        <div class="second">
+            <p class="title">Tennis Image Analysis AI</p>
+            <p>
+            <ul>
+                <li>Written in Python</li>
+                <li>Uses YOLO object detection model and Pytorch Resnet50 neural network</li>
+                <li>Uses reference points to predict coordinates of players and ball on court</li>
+                <li>Utilizes libraries: ultralytics, pytorch, opencv, pickle, pandas</li>
+                <li>
+                    <a
+                        class="Link" href="https://github.com/nickmoy/tennis-image-analysis-ai">
+                        Github
+                    </a> 
+                </li>
+            </ul>
+            </p>
+        </div>
     </div>
+
 </div>
 
 </body>
